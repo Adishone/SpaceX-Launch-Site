@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SpacexLogo from '../assets/img/space_x_logo_bw_centered.png';
 import ArrowPointer from '../assets/img/arrow_pointer.png';
 
-import style from "../styles/navbar.sass"
+import style from "../styles/header.sass"
 
 class Header extends React.Component {
 
