@@ -10,7 +10,7 @@ class MissionLinks extends React.Component {
         return (
             <div className="mission-links-container">
                 <div className="bottom">
-                    <h1>MISSION LINKS</h1>
+                    <h1 className="mission-links-title">MISSION LINKS</h1>
                     <div>
                     <button className="rounded-border-button">REDDIT CAMPAIGN</button>
                     <button className="rounded-border-button">PRESSKIT</button>

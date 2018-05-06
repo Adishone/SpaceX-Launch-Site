@@ -7,15 +7,12 @@ class Counter extends React.Component {
         from: this.props.from,
         to: this.props.to,
         timeElapsed: this.props.from,
-        onSucess: this.props.onSucess,
         interval: null,
         intervalSet: false,
         minutes: Math.floor(this.props.from/60),
         seconds: Math.floor(this.props.from % 60)
     }
     style = {
-        color: 'red',
-        textAlign: 'center',
         fontSize: '20px'
     }
 
@@ -24,24 +21,10 @@ class Counter extends React.Component {
         this.state.intervalSet = true;
     }
 
-    onCounterClicked = () => {        
-        this.setState((state, props) => {
-            if (!state.intervalSet) {
-                state.interval = setInterval(this.countUp, 1000);
-                state.intervalSet = true;
-            }
-            else {
-                clearInterval(state.interval);
-                state.intervalSet = false;
-            }
-        });
-    };
-
     countUp = () => {    
         this.setState((state, props) => {
             if (state.timeElapsed == state.to) {
                 clearInterval(state.interval);
-                state.onSucess();
             }
             else
             {
@@ -61,7 +44,7 @@ class Counter extends React.Component {
     render() {
         return (
             <div>
-                <h2 onClick={this.onCounterClicked} style={this.style}>Counter: {this.pad(this.state.minutes)}:{this.pad(this.state.seconds)}</h2>
+                <h2 onClick={this.onCounterClicked} style={this.style}>{this.pad(this.state.minutes)}:{this.pad(this.state.seconds)}</h2>
             </div>
         );
     }

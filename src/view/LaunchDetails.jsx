@@ -3,16 +3,25 @@ import Counter from '../components/Counter.jsx';
 import MissionLinks from '../components/MissionLinks';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import MissionContent from '../components/MissionContent';
 
 //import './Home.sass';
 
 class LaunchDetails extends React.Component {
+  state = {
+    launch: this.props.launch,
+    launchSite: this.props.launchSite,
+    rocket: this.props.rocket
+}
 
   render() {
     return (
       <div>
         <Header></Header>
-        <Counter from={0} to={70}> </Counter>
+        <MissionContent launch={this.state.launch}
+          launchSite={this.state.launchSite}
+          rocket={this.state.rocket}>
+          </MissionContent>
         <MissionLinks></MissionLinks>
         <Footer></Footer>
       </div>
