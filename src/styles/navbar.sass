@@ -1,0 +1,44 @@
+@import "variables"  // '~' informs sass-loader that is not relative path
+
+    
+footer
+    background-color: $dark-grey-color
+    display: flex
+
+header
+    background-color: $almost-black-color
+    display: flex
+    position: relative
+    justify-content: center
+
+.logo
+    margin-top: 1%
+    margin-bottom: 1%
+    max-height: 30px
+
+.back-button
+    color: $desert-color
+    font-size: 10pt
+    letter-spacing: 7px
+    margin-left: 1%
+    background: none
+    border: none
+    outline: none
+    position: absolute
+    left: 4%
+    align-self: center
+    &:hover
+        color: $white-color
+
+.arrow
+    margin-top: 1.7%
+    background-color: $desert-color
+    height: 2px
+    width: 30px
+    position: absolute
+    left: 2%
+    &:before
+      position: absolute
+      left: -7px
+      bottom: -7.5px
+      content: url('../assets/img/arrow_pointer.png')
