@@ -1,24 +1,177 @@
-.welcome {
-  color: #0f0f0f;
-  font-size: 3rem;
-  text-align: center;
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg); }
-  .welcome .username {
-    font-weight: normal; }
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.mission-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(/rocket.png);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.rounded-border-button {
+  color: #ffffff;
+  background: none;
+  border-color: #ffffff;
+  outline: none;
+  max-height: 30px;
+  border-radius: 100px;
+  border-width: 1px;
+  border-style: solid;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 30px;
+  margin-left: 5%; }
+  .rounded-border-button:hover {
+    color: #ccac5b;
+    border-color: #ccac5b; }
+
+.bottom {
+  width: 30%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 5%; }
+
+.mission-links-title {
+  color: #ffffff;
+  letter-spacing: 15px;
+  text-align: center; }
+
+footer {
+  background-color: #22272b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px; }
+
+.social-media-link {
+  font-size: 10pt;
+  color: #a7a9ac;
+  text-decoration: none;
+  margin-right: 0.7%; }
+  .social-media-link:hover {
+    color: #ffffff; }
+
+.footer-text {
+  font-size: 10pt;
+  color: #666666;
+  margin-right: 0.7%; }
+
+.pull-right {
+  position: absolute;
+  right: 1%; }
+
+header {
+  background-color: #0f1112;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.logo {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  max-height: 30px; }
+
+.back-button {
+  color: #ccac5b;
+  font-size: 10pt;
+  letter-spacing: 7px;
+  margin-left: 1%;
+  background: none;
+  border: none;
+  outline: none;
+  position: absolute;
+  left: 4%;
+  -ms-flex-item-align: center;
+      align-self: center; }
+  .back-button:hover {
+    color: #ffffff; }
+
+.arrow {
+  margin-top: 1.7%;
+  background-color: #ccac5b;
+  height: 2px;
+  width: 30px;
+  position: absolute;
+  left: 2%; }
+  .arrow:before {
+    position: absolute;
+    left: -7px;
+    bottom: -7.5px;
+    content: url(/arrow_pointer.png); }
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.left {
+  width: 50%; }
+
+.right {
+  width: 50%; }
+
+.title {
+  color: #ccac5b;
+  letter-spacing: 5px; }
+
+.text-black {
+  color: #000000; }
+
+.text-grey {
+  color: #a7a9ac; }
+
+hr {
+  border-color: #ccac5b;
+  border-style: solid; }
+
+p {
+  font-size: 10pt;
+  margin-right: 1%;
+  margin-bottom: 5%; }
+
+.m-l-sm {
+  margin-left: 5%; }
+
+.rocket-name {
+  font-size: 30pt; }
+
+.rocket-logo {
+  margin-top: 3%; }
+
+.letter-spacing-sm {
+  letter-spacing: 10px; }
+
+table {
+  width: 100%;
+  font-size: 10pt;
+  border: none; }
+
+td {
+  border-left: dotted;
+  text-transform: uppercase;
+  width: 49%; }
 
 html {
   font-size: 10px; }
 
 body {
-  margin: 0; }
-
-main {
-  width: 80%;
-  margin: 4rem auto 0;
-  padding: 2rem;
-  border-radius: 1rem;
-  background: #d7d7d7; }
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Open Sans', sans-serif; }
 
 
 /*# sourceMappingURL=main.css.map*/
