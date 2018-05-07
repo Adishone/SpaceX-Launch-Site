@@ -3,7 +3,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url(/rocket.png);
+  background-image: url(rocket.png);
   background-position: center;
   background-size: cover;
   height: 600px;
@@ -104,7 +104,7 @@ header {
     position: absolute;
     left: -7px;
     bottom: -7.5px;
-    content: url(/arrow_pointer.png); }
+    content: url(arrow_pointer.png); }
 
 .content {
   display: -webkit-box;
