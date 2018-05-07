@@ -11,7 +11,8 @@ class MissionContent extends React.Component {
         launchSite: this.props.launchSite,
         rocket: this.props.rocket,
         launchDate: moment(this.props.launch.launch_date_utc).format("DD MMM YYYY"),
-        launchTime: moment(this.props.launch.launch_date_utc)
+        launchTime: moment(this.props.launch.launch_date_utc),
+        firstFlight: moment(this.props.rocket.first_flight).format("DD MMMM YYYY")
     }
 
     render() {
@@ -33,23 +34,37 @@ class MissionContent extends React.Component {
                     <p>{this.state.launch.details}</p>
                     <h2 className="title">ROCKET</h2>
                     <hr />
-                    <div className="left">
-                    NAME:
-                    COMPANY:
-                    HEIGHT:
-                    DIAMETER:
-                    MASS:
-                    </div>
-
-                    <div className="right">
-                    FIRST FLIGHT:
-                    COUNTRY:
-                    SUCCESS RATE:
-                    COST PER LAUNCH:
-                    </div>
+                    <table>
+                    <tr>
+                        <td><span className="text-grey m-l-sm">NAME: </span><span>{this.state.rocket.name}</span></td>
+                        <td><span className="text-grey m-l-sm">FIRST FLIGHT: </span><span>{this.state.firstFlight}</span></td>
+                    </tr>
+                    <tr>
+                        <td><span className="text-grey m-l-sm">COMPANY: </span><span>{this.state.rocket.company}</span></td>
+                        <td rowSpan="2"><span className="text-grey m-l-sm">COUNTRY: </span><span>{this.state.rocket.country}</span></td>
+                    </tr>
+                    <tr>
+                        <td><span className="text-grey m-l-sm">HEIGHT: </span><span>{this.state.rocket.height.meters}M / {this.state.rocket.height.feet}FT</span></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><span className="text-grey m-l-sm">DIAMETER: </span><span>{this.state.rocket.diameter.meters}M / {this.state.rocket.diameter.feet}FT</span></td>
+                        <td><span className="text-grey m-l-sm">SUCCESS RATE: </span><span>{this.state.rocket.success_rate_pct}%</span></td>
+                    </tr>
+                    <tr>
+                        <td><span className="text-grey m-l-sm">MASS: </span><span>{this.state.rocket.mass.kg}KG / {this.state.rocket.mass.lb}LB</span></td>
+                        <td><span className="text-grey m-l-sm">COST PER LAUNCH: </span><span>${this.state.rocket.cost_per_launch}</span></td>
+                    </tr>
+                    </table>
                     <p>{this.state.rocket.description}</p>
                     <h2 className="title">LAUNCHPAD</h2>
                     <hr />
+                    <table>
+                        <tr>
+                        <td><span className="text-grey m-l-sm">NAME: </span><span>{this.state.launchSite.full_name}</span></td>
+                        <td><span className="text-grey m-l-sm">LOCATION: </span><span>{this.state.launchSite.location.name},{this.state.launchSite.location.region}</span></td>
+                        </tr>
+                    </table>
                     <p>{this.state.launchSite.details}</p>
                 </div>
                 
